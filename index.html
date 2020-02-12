@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Define title-->
+    <title>Patient Medical Records</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <!--You can load all the css files here -->
+    <link rel="stylesheet" type="text/css" href="select.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<!--HTML content goes here-->
+
+
+<nav class="app-nav">
+    <h1 class="app-title">Patient Records</h1>
+</nav>
+
+<div class="content">
+    <section class="flex select-form-container" id="patient-filter">
+        <div class="select">
+            <select id="patient-select">
+                <option selected disabled value="-1">Select User</option>
+                <option value="1">John Oliver</option>
+                <option value="2">Bob Martin</option>
+                <option value="3">Helena Fernandez</option>
+                <option value="4">Francesco De Mello</option>
+            </select>
+        </div>
+
+        <button type="submit" id="submit-btn">
+            Show
+        </button>
+    </section>
+
+    <div id="loader-view">
+        <section class="loader-container">
+            <span class="loader"></span>
+        </section>
+    </div>
+
+    <section class="patient-profile-container" id="profile-view">
+        <div id="patient-profile">
+            <h1 id="patient-name"></h1>
+            <h3 id="patient-dob"></h3>
+            <h3 id="patient-height"></h3>
+        </div>
+
+        <table id="patient-records-table">
+            <thead id="table-header">
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+    </section>
+</div>
+
+<!--You can load all the javascript files here-->
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
